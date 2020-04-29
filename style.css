@@ -5,13 +5,11 @@ html {
 body {
     width: 80%;
     min-height: calc(100vh - 4em);
-    margin: 0 auto;
-    padding: 2em;
     background-color: #dddddd;
     border-color: #eeeeee;
     border-left-style: solid;
     border-right-style: solid;
-    border-width: 20px;
+
 }
 h1 {
     color: #93FB93;
