@@ -36,3 +36,10 @@ h1 {
     margin: -2px auto;
     cursor: pointer;
 }
+p {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16pt;
+    line-height: 1;
+    margin: 4pt;
+}
