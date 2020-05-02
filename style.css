@@ -6,9 +6,8 @@ body {
     width: 80%;
     min-height: calc(100vh - 4em);
     background-color: #FAFAD2;
-    border-color: #eeeeee;
-    border-left-style: solid;
-    border-right-style: solid;
+    margin: 0 auto;
+    padding: 2em;
 
 }
 h1 {
@@ -19,6 +18,13 @@ h1 {
     line-height: 72pt;
     margin-top: 0pt;
     margin-bottom: 0pt;
+}
+h2 {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 36pt;
+    line-height: 36pt;
+    margin-top: 12pt;
 }
 .button {
     background-color: #2196f3;
