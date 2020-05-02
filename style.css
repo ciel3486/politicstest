@@ -36,7 +36,7 @@ h1 {
     margin: -2px auto;
     cursor: pointer;
 }
-p {
+p.instruction {
     color: #000000;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16pt;
