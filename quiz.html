@@ -5,5 +5,76 @@
     <title> Belle Epoque : Political Exposure Test </title>
     <meta charset="utf-8">
   </head>
-<body> </body>
+  <body>
+  <script type="application/javascript"
+        src="questions.js">
+  </script>
+    <h1> 정치 노출도 테스트 </h1>
+    <hr>
+    <h2 style="text-align:center;" id="question-number">Loading...</h2>
+  <p class="question" id="question-text"></p>
+  <button class="button" onclick="next_question( 1.0)" style="background-color: #1b5e20;">Strongly Agree</button> <br>
+  <button class="button" onclick="next_question( 0.5)" style="background-color: #4caf50;">Agree</button> <br>
+  <button class="button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;">Neutral/Unsure</button> <br>
+  <button class="button" onclick="next_question(-0.5)" style="background-color: #f44336;">Disagree</button> <br>
+  <button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;">Strongly Disagree</button> <br>
+  <button class="small_button" onclick="prev_question()" id="back_button">Back</button>
+  <button class="small_button_off" id="back_button_off">Back</button><br>
+  </body>
+  
+  <script>
+    var max_bias, max_inte; // Max possible scores
+    max_bias, max_inte = 0;
+    var bias, inte; // User's scores
+    bias = inte = 0;
+    var qn = 0; // Question number
+    var prev_answer = null;
+    init_question();
+    for (var i = 0; i < questions.length; i++) {
+        max_bias += Math.abs(questions[i].effect.econ)
+        max_inte += Math.abs(questions[i].effect.dipl)
+    }
+    function init_question() {
+        document.getElementById("question-text").innerHTML = questions[qn].question;
+        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length);
+        if (prev_answer == null) {
+            document.getElementById("back_button").style.display = 'none';
+            document.getElementById("back_button_off").style.display = 'block';
+        } else {
+            document.getElementById("back_button").style.display = 'block';
+            document.getElementById("back_button_off").style.display = 'none';
+        }
+
+    }
+
+    function next_question(mult) {
+        bias += mult*questions[qn].effect.bias
+        inte += mult*questions[qn].effect.inte
+        qn++;
+        prev_answer = mult;
+        if (qn < questions.length) {
+            init_question();
+        } else {
+            results();
+        }
+    }
+    function prev_question() {
+        if (prev_answer == null) {
+            return;
+        }
+        qn--;
+        bias -= prev_answer * questions[qn].effect.bias;
+        inte -= prev_answer * questions[qn].effect.inte;
+        prev_answer = null;
+        init_question();
+
+    }
+    function calc_score(score,max) {
+        return (100*(max+score)/(2*max)).toFixed(1)
+    }
+    function results() {
+        location.href = `results.html`
+            + `?b=${calc_score(bias,max_bias)}`
+            + `&i=${calc_score(inte,max_inte)}`
+            }
 </html>
