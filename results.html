@@ -59,8 +59,8 @@ function getQueryVariable(variable)
     bias  = getQueryVariable("b")
     interest = getQueryVariable("i")
 
-    setBarValue("bias", equality)
-    setBarValue("interest", wealth)
+    setBarValue("bias", bias)
+    setBarValue("interest", interest)
 
     document.getElementById("bias-label").innerHTML = setLabel(bias, biasArray)
     document.getElementById("interest-label").innerHTML = setLabel(interest, inteArray)
