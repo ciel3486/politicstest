@@ -109,6 +109,15 @@ p.question-text {
     font-family: 'Noto Sans KR', sans-serif;
     font-size : 20pt;
     letter-spacing: -1pt;
+    background-color = #eeeeee
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    min-width: 500pt;
+    min-height: 144pt;
+    padding: 16pt;
+    border-radius: 16pt;
 }
 p.questions {
     background-color = #eeeeee
@@ -117,4 +126,5 @@ p.questions {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width : 80%
 }
