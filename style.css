@@ -105,3 +105,8 @@ div.interest {
     text-align: left;
     border-left-style: solid;
 }
+p.question-text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size : 20pt;
+    letter-spacing: -1pt;
+}
