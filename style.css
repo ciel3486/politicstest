@@ -110,3 +110,11 @@ p.question-text {
     font-size : 20pt;
     letter-spacing: -1pt;
 }
+p.question {
+    background-color = #eeeeee
+    padding: 16pt;
+    border-radius: 16pt;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
