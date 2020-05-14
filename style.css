@@ -127,4 +127,6 @@ p.questions {
     align-items: center;
     text-align: center;
     width : 80%
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size : 20pt;
 }
