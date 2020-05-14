@@ -31,8 +31,8 @@
     var prev_answer = null;
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_bias += Math.abs(questions[i].effect.econ)
-        max_inte += Math.abs(questions[i].effect.dipl)
+        max_bias += Math.abs(questions[i].effect.bias)
+        max_inte += Math.abs(questions[i].effect.inte)
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
