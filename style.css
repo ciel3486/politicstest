@@ -109,7 +109,7 @@ p.question-text {
     font-family: 'Noto Sans KR', sans-serif;
     font-size : 20pt;
     letter-spacing: -1pt;
-    background-color = #eeeeee;
+    background-color : #eeeeee;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -122,11 +122,16 @@ p.question-text {
 p.question {
     font-family: 'Noto Sans KR', sans-serif;
     font-size : 20pt;
-    background-color = #eeeeee;
+    background-color : #eeeeee;
     padding: 16pt;
     border-radius: 16pt;
     justify-content: center;
     align-items: center;
     text-align: center;
     width : 80%;
+}
+p.right {
+    font-family :'Noto Sans KR', sans-serif;
+    text-align: right;
+    font-size : 10pt;
 }
