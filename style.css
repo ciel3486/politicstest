@@ -105,6 +105,7 @@ div.interest {
     text-align: left;
     border-left-style: solid;
 }
+
 p#question-text {
     font-family: 'Noto Sans KR', sans-serif;
     font-size : 20pt;
@@ -131,6 +132,20 @@ p.question {
     width : 80%;
     margin : 0 auto;
     vertical-align : middle;
+}
+div.question {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size : 20pt;
+    letter-spacing: -1pt;
+    background-color : #eeeeee;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    min-width: 500pt;
+    min-height: 144pt;
+    padding: 16pt;
+    border-radius: 16pt;
+    margin : 0 auto;
 }
 p.right {
     font-family :'Noto Sans KR', sans-serif;
