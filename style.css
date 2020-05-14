@@ -116,7 +116,7 @@ p.question {
     margin : 0 auto;
     vertical-align : middle;
 }
-div.question {
+p#question-text {
     font-family: 'Noto Sans KR', sans-serif;
     font-size : 20pt;
     letter-spacing: -1pt;
@@ -129,6 +129,7 @@ div.question {
     padding: 16pt;
     border-radius: 16pt;
     margin : 0 auto;
+    vertical-align: middle;
 }
 p.right {
     font-family :'Noto Sans KR', sans-serif;
