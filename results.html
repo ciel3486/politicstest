@@ -54,10 +54,10 @@ function getQueryVariable(variable)
          	{return ""}
     }
 
-    bais  = getQueryVariable("b")
+    bias  = getQueryVariable("s")
     interest = getQueryVariable("i")
 
-    setBarValue("bais", bais)
+    setBarValue("bias", bias)
     setBarValue("interest", interest)
 
     document.getElementById("bias-label").innerHTML = setLabel(bias, biasArray)
